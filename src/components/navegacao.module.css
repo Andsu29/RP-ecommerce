@@ -1,0 +1,31 @@
+.btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.nav {
+  animation: nav 0.2s forwards;
+}
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body a {
+  color: rgb(108, 53, 156);
+  font-family: "Roboto";
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+body a:hover {
+  color: rgb(145, 72, 208);
+}
+@keyframes nav {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
