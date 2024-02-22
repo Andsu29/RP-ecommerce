@@ -1,78 +1,146 @@
-.table {
-  width: 95%;
-  border: none;
-  margin: 30px auto;
-}
 .cabecalho {
-  height: 30px;
+  display: flex;
+  min-width: 1500px;
+  margin: 0 auto;
+}
+.tabela {
+  margin-top: 40px;
+}
+.itemHead {
+  background-color: rgb(108, 53, 156);
+  color: #f9f9f9;
 }
 .linha {
-  width: 60px;
+  width: 70px;
+  overflow: hidden;
+  text-align: center;
+}
+.codigo {
+  width: 150px;
+  overflow: hidden;
+  text-align: center;
+}
+.titulo {
+  width: 500px;
+  overflow: hidden;
+}
+.cor,
+.data,
+.genero {
+  width: 150px;
+  text-align: center;
+  overflow: hidden;
 }
 .filtro {
-  width: 100%;
+  width: 350px;
+}
+.filtroBox {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.input {
+.inputBusca {
   height: 30px;
-  width: 90%;
-  border-radius: 30px;
+  border-radius: 5px;
   border: none;
   outline: none;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   font-size: 1rem;
   padding: 10px;
 }
-.btn {
+.busca {
   border: none;
   background-color: transparent;
   border-radius: 50%;
   margin-left: 10px;
 }
-.btn:hover {
+.busca:hover {
   transition: all 0.3s;
   transform: scale(1.2);
+}
+.botao {
+  padding: 0px 16px;
+  border: none;
+  background-color: rgb(108, 53, 156);
+  color: #ece7e7;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.1rem;
+}
+.botao:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+  background-color: rgb(145, 72, 208);
 }
 .botoes {
   display: flex;
   justify-content: space-around;
 }
 
-th {
-  border: none;
-  border-radius: 30px;
-  padding: 10px;
-  background-color: rgb(108, 53, 156);
-  text-align: center;
-  color: #ece7e7;
-  font-size: 1.2rem;
-}
-
-td {
-  border: none;
-  border-radius: 30px;
-  padding: 5px;
-  background-color: rgb(201, 203, 205);
-  text-align: center;
-  font-size: 1.1rem;
-}
-td:hover {
-  background-color: rgb(184, 185, 186);
-}
 .masculino {
-  background-color: rgb(221, 172, 111);
+  background-color: rgb(240, 199, 148);
 }
 .cameba {
-  background-color: rgb(117, 181, 238);
+  background-color: rgb(149, 200, 245);
 }
 .infantil {
-  background-color: rgb(117, 238, 159);
+  background-color: rgb(148, 245, 182);
 }
 .feminino {
-  background-color: rgb(238, 150, 233);
+  background-color: rgb(242, 185, 239);
 }
 .outros {
-  background-color: rgb(219, 203, 122);
+  background-color: rgb(245, 234, 178);
+}
+
+@media screen and (max-width: 800px) {
+  .cabecalho {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .none {
+    display: none;
+  }
+  .linha,
+  .codigo,
+  .titulo,
+  .cor,
+  .data,
+  .genero {
+    width: 350px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .filtro {
+    width: 100vw;
+  }
+  .tabela {
+    margin: 40px auto;
+  }
+  .botoes {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cabecalho {
+    min-width: 100%;
+  }
+  .linha,
+  .codigo,
+  .titulo,
+  .cor,
+  .data,
+  .genero,
+  .botoes {
+    width: 350px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .tabela {
+    margin: 30px auto;
+  }
+  .botoes {
+    margin: 0 auto;
+  }
 }

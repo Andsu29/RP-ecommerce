@@ -3,7 +3,7 @@
   border: none;
   background-color: rgb(108, 53, 156);
   color: #ece7e7;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1.1rem;
 }
