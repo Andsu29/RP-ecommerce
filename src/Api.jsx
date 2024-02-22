@@ -1,4 +1,5 @@
-export const url = "http://127.0.0.1:8000";
+export const url = "http://localhost:80";
+
 import axios from "axios";
 
 export function GET_ITENS() {
