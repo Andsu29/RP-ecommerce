@@ -2,6 +2,10 @@
   width: 90%;
   margin: 40px auto;
 }
+.graficos {
+  display: flex;
+  justify-content: center;
+}
 .graph {
   height: 600px;
 }
