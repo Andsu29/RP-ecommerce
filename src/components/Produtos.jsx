@@ -83,7 +83,7 @@ const Produtos = () => {
             value={categoria}
             onChange={({ target }) => setCategoria(target.value)}
           >
-            <option>Categoria</option>
+            <option disabled>Categorias</option>
             <option value="feminino">Feminino</option>
             <option value="masculino">Masculino</option>
             <option value="infantil">Infantil</option>
@@ -91,7 +91,7 @@ const Produtos = () => {
             <option value="acessorios">Acessórios</option>
           </select>
         </div>
-        <Button>Adicionar</Button>
+        <Button title={"Adicionar"}>Adicionar</Button>
       </form>
 
       <TabelaProdutos info={dados} />

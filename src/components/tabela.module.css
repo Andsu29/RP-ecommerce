@@ -9,6 +9,10 @@
 .itemHead {
   background-color: rgb(108, 53, 156);
   color: #f9f9f9;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .linha {
   width: 70px;
@@ -58,14 +62,29 @@
   transform: scale(1.2);
 }
 .botao {
-  padding: 0px 16px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
   border: none;
   background-color: rgb(108, 53, 156);
   color: #ece7e7;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-size: 1.1rem;
 }
+.botaoAtualiza {
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+  background-color: rgb(108, 53, 156);
+  color: #ece7e7;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.botaoAtualizaBox {
+  width: 100px;
+  display: flex;
+}
+.botaoAtualiza:hover,
 .botao:hover {
   transform: scale(1.1);
   transition: all 0.3s;
@@ -73,7 +92,7 @@
 }
 .botoes {
   display: flex;
-  justify-content: space-around;
+  gap: 14px;
 }
 
 .masculino {

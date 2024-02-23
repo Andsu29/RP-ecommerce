@@ -77,6 +77,7 @@ const TabelaProdutos = ({ info }) => {
                   }}
                 />
                 <button
+                  title="Buscar"
                   className={style.busca}
                   onClick={() => {
                     setDados(null);
@@ -192,6 +193,7 @@ const TabelaProdutos = ({ info }) => {
               <ListGroup.Item action className={`${style.filtro}`}>
                 <div className={`${style.botoes}`}>
                   <button
+                    title="Editar"
                     className={`${style.botao}`}
                     onClick={() => {
                       getIndex(index);
@@ -209,6 +211,7 @@ const TabelaProdutos = ({ info }) => {
                     </svg>
                   </button>
                   <button
+                    title="Excluir"
                     className={`${style.botao}`}
                     onClick={async () => {
                       console.log(item.id);
@@ -233,8 +236,10 @@ const TabelaProdutos = ({ info }) => {
               </ListGroup.Item>
 
               {atualiza && indexProduto === index ? (
-                <ListGroup.Item>
-                  <Button
+                <ListGroup.Item className={`${style.botaoAtualizaBox}`}>
+                  <button
+                    title="Atualizar"
+                    className={`${style.botaoAtualiza}`}
                     onClick={async () => {
                       const novoProduto = {
                         codigo: novoCodigo,
@@ -266,7 +271,7 @@ const TabelaProdutos = ({ info }) => {
                     >
                       <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                     </svg>
-                  </Button>
+                  </button>
                 </ListGroup.Item>
               ) : (
                 ""
