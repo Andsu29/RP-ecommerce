@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Input from "./Input";
-import Button from "./Button";
 import { DELETAR_ITEM, ATUALIZA_ITEM, BUSCA_PRODUTO, GET_ITENS } from "../Api";
 import { capitalize } from "lodash";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -70,6 +69,9 @@ const TabelaProdutos = ({ info }) => {
             <ListGroup.Item className={`${style.filtro} ${style.itemHead}`}>
               <div className={style.filtroBox}>
                 <input
+                  id="busca"
+                  name="busca"
+                  required
                   type="text"
                   className={style.inputBusca}
                   onChange={({ target }) => {
@@ -79,9 +81,13 @@ const TabelaProdutos = ({ info }) => {
                 <button
                   title="Buscar"
                   className={style.busca}
-                  onClick={() => {
+                  onClick={async () => {
                     setDados(null);
-                    BUSCA_PRODUTO(item, setDados);
+                    try {
+                      if (item) BUSCA_PRODUTO(item, setDados);
+                    } catch (error) {
+                      console.log(error);
+                    }
                   }}
                 >
                   <svg

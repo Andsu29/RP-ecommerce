@@ -53,24 +53,28 @@ const Produtos = () => {
           </svg>
         </div>
         <Input
+          name={"codigo"}
           label={"Código"}
           type={"text"}
           valor={codigo}
           onChange={({ target }) => setCodigo(target.value)}
         />
         <Input
+          name={"titulo"}
           label={"Título"}
           valor={titulo}
           type={"text"}
           onChange={({ target }) => setTitulo(target.value)}
         />
         <Input
+          name={"cor"}
           label={"Cor"}
           valor={cor}
           type={"text"}
           onChange={({ target }) => setCor(target.value)}
         />
         <Input
+          name={"data"}
           label={"Data"}
           valor={data}
           type={"text"}
